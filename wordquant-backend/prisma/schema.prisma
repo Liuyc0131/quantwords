@@ -1,0 +1,22 @@
+// 数据源配置
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL") // 从 .env 文件中读取数据库连接
+}
+
+// 生成 Prisma 客户端代码的配置
+generator client {
+  provider = "prisma-client-js"
+}
+
+// 定义一个 Word 表，存储单词和释义
+model Coca {
+  id         Int      @id @default(autoincrement())
+  rank       Int      @unique     // 词频排名
+  word       String                // 单词本体
+  pos        String?               // 词性
+  collins    Int?                  // 柯林斯等级
+  tag        String?               // 标签
+  definition String?               // 释义
+  createdAt  DateTime @default(now())
+}
