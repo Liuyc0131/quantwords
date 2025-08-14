@@ -20,8 +20,10 @@ npm install
 
 生成 Prisma 客户端  
 cd wordquant-backend  
-npm run db:pull   # 从数据库读取表结构  
-npm run db:gen    # 生成 Prisma Client  
+npm install  
+npx prisma generate  
+npm run dev  
+
 
 启动后端  
 cd wordquant-backend  
