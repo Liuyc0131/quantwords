@@ -57,10 +57,9 @@ NEXT_PUBLIC_API_URL="http://localhost:3001"
 ```bash
 # 生成 Prisma 客户端
 cd ../wordquant-backend
+node src/index.js
+npx prisma db pull  
 npx prisma generate
-
-# 启动后端（默认端口 3001）
-npm run dev
 
 # 启动前端（新开终端）
 cd ../wordquant-frontend
