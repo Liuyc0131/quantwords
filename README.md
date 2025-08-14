@@ -42,13 +42,19 @@ npm install
 # 安装前端依赖
 cd ../wordquant-frontend
 npm install
+```
 
 后端 .env（在 wordquant-backend/ 下新建 .env 文件）：  
+```bash
 DATABASE_URL="mysql://用户名:密码@数据库地址:3306/数据库名"
+```
 
 前端 .env.local（在 wordquant-frontend/ 下新建 .env.local 文件）：  
+```bash
 NEXT_PUBLIC_API_URL="http://localhost:3001"
+```
 
+```bash
 # 生成 Prisma 客户端
 cd ../wordquant-backend
 npx prisma generate
@@ -63,3 +69,4 @@ npm run dev
 打开浏览器访问： 
 http://localhost:3000/words  
 即可看到单词列表页面。
+```
