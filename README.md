@@ -21,8 +21,7 @@ npm install
 生成 Prisma 客户端  
 cd wordquant-backend  
 npm install  
-npx prisma generate  
-npm run dev  
+npx prisma generate   
 
 
 启动后端  
